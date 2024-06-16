@@ -1,4 +1,4 @@
-# SistemDigital2024
+# Arsip Belajar Sistem Digital 2024
 Mata Kuliah EL2002 (Sistem Digital) dan EL2102 (Praktikum Sistem Digital)
 
 > "Always bear in mind that your own resolution to succeed is more important than any one thing."
