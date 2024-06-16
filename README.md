@@ -1,9 +1,8 @@
 # SistemDigital2024
 Mata Kuliah EL2002 (Sistem Digital) dan EL2102 (Praktikum Sistem Digital)
-  {
-    "author": "Abraham Lincoln",
-    "text": "Always bear in mind that your own resolution to succeed is more important than any one thing."
-  }
+
+> "Always bear in mind that your own resolution to succeed is more important than any one thing."
+>>> Abraham Lincoln
 
 William A STEIR'23
 I decided to create this because EE Voltans (STEI-R'22) said this is the hardest subject.
