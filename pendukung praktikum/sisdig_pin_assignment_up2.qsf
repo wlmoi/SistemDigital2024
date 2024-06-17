@@ -1,0 +1,35 @@
+set_location_assignment PIN_6 -to HEX1[0]
+set_location_assignment PIN_7 -to HEX1[1]
+set_location_assignment PIN_8 -to HEX1[2]
+set_location_assignment PIN_9 -to HEX1[3]
+set_location_assignment PIN_11 -to HEX1[4]
+set_location_assignment PIN_12 -to HEX1[5]
+set_location_assignment PIN_13 -to HEX1[6]
+set_location_assignment PIN_14 -to HEX1[7]
+set_location_assignment PIN_17 -to HEX2[0]
+set_location_assignment PIN_18 -to HEX2[1]
+set_location_assignment PIN_19 -to HEX2[2]
+set_location_assignment PIN_20 -to HEX2[3]
+set_location_assignment PIN_21 -to HEX2[4]
+set_location_assignment PIN_23 -to HEX2[5]
+set_location_assignment PIN_24 -to HEX2[6]
+set_location_assignment PIN_25 -to HEX2[7]
+set_location_assignment PIN_41 -to SW1[0]
+set_location_assignment PIN_40 -to SW1[1]
+set_location_assignment PIN_39 -to SW1[2]
+set_location_assignment PIN_38 -to SW1[3]
+set_location_assignment PIN_36 -to SW1[4]
+set_location_assignment PIN_35 -to SW1[5]
+set_location_assignment PIN_34 -to SW1[6]
+set_location_assignment PIN_33 -to SW1[7]
+set_location_assignment PIN_91 -to CLK[0]
+set_location_assignment PIN_45 -to GPIO[15]
+set_location_assignment PIN_46 -to GPIO[16]
+
+set_global_assignment -name FAMILY FLEX10K
+set_global_assignment -name DEVICE "EPF10K70RC240-4"
+set_global_assignment -name TOP_LEVEL_ENTITY ngoek
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "6.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "06:40:46  AUGUST 21, 2008"
+set_global_assignment -name LAST_QUARTUS_VERSION "6.0 SP1"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
