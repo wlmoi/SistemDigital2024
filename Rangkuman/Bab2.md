@@ -7,4 +7,4 @@
 Logika nMOS adalah gerbang logika yang menggunakan transistor efek medan
 semikonduktor oksida logam (MOSFET) untuk membentuk
 fungsi gerbang logika dan sirkuit digital lainnya. 
-[Logika nMOS](https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/NMOS_NOR_WITH_RESISTIVE_LOAD.PNG/338px-NMOS_NOR_WITH_RESISTIVE_LOAD.PNG)
+![Gambar Logika nMOS](https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/NMOS_NOR_WITH_RESISTIVE_LOAD.PNG/338px-NMOS_NOR_WITH_RESISTIVE_LOAD.PNG)
