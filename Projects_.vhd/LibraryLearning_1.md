@@ -73,5 +73,5 @@ Jika diberikan operasi logika dasar seperti AND:
 ---
 
 ### Keuntungan Penggunaan `STD_LOGIC`
-Keuntungan utama dari penggunaan `STD_LOGIC` adalah fleksibilitasnya dalam menangani berbagai kondisi logika yang lebih realistis. Hal ini memungkinkan kita untuk mendesain perangkat keras digital yang kompleks dengan lebih akurat.
+Keuntungan utama dari penggunaan `STD_LOGIC` adalah fleksibilitasnya dalam menangani berbagai kondisi logika yang lebih realistis. Hal ini digunakan untuk mendesain perangkat keras digital yang kompleks dengan lebih akurat.
 
