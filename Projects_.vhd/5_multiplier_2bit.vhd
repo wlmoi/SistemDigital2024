@@ -21,7 +21,7 @@ begin
     -- Berdasarkan K-map untuk P0 (hasil perkalian antara A0 dan B0):
     --    K-map P0:
     --      A0\B0 | 0  | 1  |
-    --      --------------
+    --      -------------- 
     --      0    | 0  | 0  |
     --      1    | 0  | 1  |
     -- Fungsi minimal untuk P0 adalah P0 = A0 AND B0.
@@ -32,7 +32,7 @@ begin
     -- Berdasarkan K-map untuk P1 (hasil perkalian yang menghasilkan bit ke-1):
     --    K-map P1:
     --      A0\B0 | 0  | 1  |
-    --      --------------
+    --      -------------- 
     --      0    | 0  | 1  |
     --      1    | 1  | 1  |
     -- Fungsi minimal untuk P1 adalah P1 = (A1 AND B0) OR (A0 AND B1).
@@ -45,7 +45,7 @@ begin
     -- Berdasarkan K-map untuk P2 (hasil perkalian yang menghasilkan bit ke-2):
     --    K-map P2:
     --      A0\B0 | 0  | 1  |
-    --      --------------
+    --      -------------- 
     --      0    | 0  | 0  |
     --      1    | 0  | 1  |
     -- Fungsi minimal untuk P2 adalah P2 = A1 AND B1.
@@ -59,3 +59,28 @@ begin
     -- Oleh karena itu, P3 selalu '0'.
     P3 <= '0';
 end Behavioral;
+
+-- Contoh Kasus:
+
+-- Misalkan kita memiliki dua angka 2-bit:
+-- A = 3 (biner 11)
+-- B = 2 (biner 10)
+
+-- Langkah 1: Tentukan bit-bit input A dan B
+-- A = 11 (biner) -> A1 = 1, A0 = 1
+-- B = 10 (biner) -> B1 = 1, B0 = 0
+
+-- Langkah 2: Hitung P0 (bit terendah)
+-- P0 = A0 AND B0 = 1 AND 0 = 0
+
+-- Langkah 3: Hitung P1
+-- P1 = (A1 AND B0) OR (A0 AND B1) = (1 AND 0) OR (1 AND 1) = 0 OR 1 = 1
+
+-- Langkah 4: Hitung P2
+-- P2 = A1 AND B1 = 1 AND 1 = 1
+
+-- Langkah 5: Hitung P3 (tidak ada carry lebih jauh)
+-- P3 = 0
+
+-- Maka, hasil perkalian A * B = 3 * 2 = 6 (biner 0110)
+-- Output: P3 P2 P1 P0 = 0 1 1 0
