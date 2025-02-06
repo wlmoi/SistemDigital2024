@@ -1,0 +1,47 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY Vending_Machine IS
+    PORT (
+        clk           : IN  STD_LOGIC;  -- Sinyal clock
+        reset         : IN  STD_LOGIC;  -- Sinyal reset
+        coin5         : IN  STD_LOGIC;  -- Sinyal koin 5-unit (aktif bila koin dimasukkan)
+        coin10        : IN  STD_LOGIC;  -- Sinyal koin 10-unit (aktif bila koin dimasukkan)
+        product       : OUT STD_LOGIC;  -- Sinyal keluaran produk (aktif bila produk dikeluarkan)
+        total_display : OUT INTEGER RANGE 0 TO 20  -- Nilai total koin yang tersimpan (untuk monitoring)
+    );
+END Vending_Machine;
+
+ARCHITECTURE Behavioral OF Vending_Machine IS
+    CONSTANT PRODUCT_PRICE : INTEGER := 15;  -- Harga produk (15 unit)
+    SIGNAL total           : INTEGER RANGE 0 TO 20 := 0;  -- Total nilai koin yang terkumpul
+    SIGNAL product_signal  : STD_LOGIC := '0';  -- Sinyal keluaran produk internal
+BEGIN
+    PROCESS (clk, reset)
+    BEGIN
+        IF reset = '1' THEN
+            total          <= 0;
+            product_signal <= '0';
+        ELSIF rising_edge(clk) THEN
+            -- Proses penambahan nilai koin
+            IF coin5 = '1' THEN
+                total <= total + 5;
+            ELSIF coin10 = '1' THEN
+                total <= total + 10;
+            END IF;
+            
+            -- Jika total mencapai atau melebihi harga produk, keluarkan produk
+            IF total >= PRODUCT_PRICE THEN
+                product_signal <= '1';
+                -- Mengurangi total dengan harga produk (jika ada sisa, akan tersimpan sebagai kembalian)
+                total <= total - PRODUCT_PRICE;
+            ELSE
+                product_signal <= '0';
+            END IF;
+        END IF;
+    END PROCESS;
+    
+    product       <= product_signal;
+    total_display <= total;
+END Behavioral;
